@@ -2,9 +2,11 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import { useContext } from "react";
 import { UserContext } from "../UserContextProvider.jsx";
+import { useNavigate } from "react-router-dom";
 
 function SignInWithGoogle() {
   const { getLoginData } = useContext(UserContext);
+  const navigate = useNavigate();
 
   function googleLogin() {
     const provider = new GoogleAuthProvider();
@@ -12,7 +14,7 @@ function SignInWithGoogle() {
       console.log(result);
       if (result.user) {
         getLoginData(result.user);
-        window.location.href = "/feed";
+        navigate("/feed");
       }
     });
   }

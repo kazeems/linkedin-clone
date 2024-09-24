@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase";
 import { UserContext } from "../UserContextProvider.jsx";
+import { useNavigate } from "react-router-dom";
 
 function CommonFeed() {
   const { userData, getLoginData, logoutUser } = useContext(UserContext);
   const [loggingOut, setloggingOut] = useState(false);
+  const navigate = useNavigate();
 
   console.log(userData);
 
@@ -26,7 +28,7 @@ function CommonFeed() {
 
       await auth.signOut();
       logoutUser();
-      window.location.href = "/";
+      Navigate("/");
     } catch (error) {
       console.error("Error logging out: ", error.message);
     }
