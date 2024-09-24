@@ -55,6 +55,25 @@ function Login() {
         </div>
         <img src="/images/login-hero.svg" />
       </div>
+      <div className="section">
+        <div className="collaborate">
+          <h2>Explore collaborative articles</h2>
+          <p>
+            We’re unlocking community knowledge in a new way. Experts add
+            insights directly into each article, started with the help of AI.
+          </p>
+        </div>
+        <div className="clouds-a">
+          <a className="clouds">Marketing</a>
+          <a className="clouds">Public Administration</a>
+          <a className="clouds">Healthcare</a>
+          <a className="clouds">Engineering</a>
+          <a className="clouds">IT Services</a>
+          <a className="clouds">Sustainability</a>
+          <a className="clouds">Business Administration</a>
+          <a className="clouds">Telecommunications</a>
+        </div>
+      </div>
     </>
   );
 }
