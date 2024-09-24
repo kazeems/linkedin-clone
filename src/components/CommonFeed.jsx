@@ -8,12 +8,8 @@ function CommonFeed() {
   const [loggingOut, setloggingOut] = useState(false);
   const navigate = useNavigate();
 
-  console.log(userData);
-
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
-      console.log(user);
-
       getLoginData(user);
     });
   };
@@ -28,7 +24,7 @@ function CommonFeed() {
 
       await auth.signOut();
       logoutUser();
-      Navigate("/");
+      navigate("/");
     } catch (error) {
       console.error("Error logging out: ", error.message);
     }
@@ -36,23 +32,25 @@ function CommonFeed() {
 
   return (
     <>
-      <div>Your Linkedin Feed</div>
-      <p className="text-green-900 text-xl">
-        Welcome to your personal professional cloned LinkedIn,{" "}
-        {userData?.displayName}
-      </p>
+      <div className="p-10">
+        <div>Your Linkedin Feed</div>
+        <p className="text-green-900 text-xl">
+          Welcome to your personal professional cloned LinkedIn,{" "}
+          {userData?.displayName}
+        </p>
 
-      <p>Please bear with us, this page is under development</p>
+        <p>Please bear with us, this page is under development</p>
 
-      <button onClick={handleLogout}>
-        Click here to <b>Logout</b>
-      </button>
+        <button onClick={handleLogout}>
+          Click here to <b>Logout</b>
+        </button>
 
-      {loggingOut && (
-        <div>
-          <p>Logging Out...</p>
-        </div>
-      )}
+        {loggingOut && (
+          <div>
+            <p>Logging Out...</p>
+          </div>
+        )}
+      </div>
     </>
   );
 }
