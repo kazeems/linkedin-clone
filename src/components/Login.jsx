@@ -51,7 +51,9 @@ function Login() {
           <h2>Welcome to your professional community</h2>
           <SignInWithGoogle />
         </div>
-        <img src="/images/login-hero.svg" />
+        <div className="hero-image">
+          <img src="/images/login-hero.svg" />
+        </div>
       </div>
       <div className="section">
         <div className="collaborate">

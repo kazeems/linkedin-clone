@@ -21,7 +21,7 @@ function SignInWithGoogle() {
   return (
     <button onClick={googleLogin}>
       <img src="/images/google.svg" alt="" />
-      Sign in with Google
+      <span>Sign in with Google</span>
     </button>
   );
 }
