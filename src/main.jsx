@@ -5,15 +5,16 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './components/Login.jsx'
 import CommonFeed from './components/CommonFeed.jsx'
+import { UserContextProvider } from "./UserContextProvider.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Login />
+    path: "/",
+    element: <Login />,
   },
   {
-    path: '/feed',
-    element: <CommonFeed />
+    path: "/feed",
+    element: <CommonFeed />,
   },
   // {
   //   path: '*',
@@ -21,8 +22,10 @@ const router = createBrowserRouter([
   // }
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
+  </StrictMode>
+);

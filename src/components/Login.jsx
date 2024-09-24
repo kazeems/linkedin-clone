@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Login.css";
 import { Link } from "react-router-dom";
+import SignInWithGoogle from "./signInWithGoogle";
 
 function Login() {
   return (
@@ -48,10 +49,7 @@ function Login() {
       <div className="grid-area">
         <div className="content-area">
           <h2>Welcome to your professional community</h2>
-          <button>
-            <img src="/images/google.svg" alt="" />
-            Sign in with Google
-          </button>
+          <SignInWithGoogle />
         </div>
         <img src="/images/login-hero.svg" />
       </div>
