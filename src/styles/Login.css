@@ -10,6 +10,12 @@ header {
   background: #fff;
 }
 
+@media (max-width: 768px) {
+  header {
+    padding: 0 5px;
+  }
+}
+
 .menus {
   display: flex;
   flex-direction: row;
@@ -56,6 +62,13 @@ header {
   border-radius: 25px;
 }
 
+@media (max-width: 768px) {
+  .action-link {
+    margin: 0;
+    padding: 8px 15px
+  }
+}
+
 .grid-area {
   position: relative;
   display: flex;
@@ -94,7 +107,6 @@ header {
   .grid-area {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 
