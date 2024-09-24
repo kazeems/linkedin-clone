@@ -1,0 +1,129 @@
+header {
+  width: 100%;
+  position: fixed;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  background: #fff;
+}
+
+.menus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+@media (max-width: 760px) {
+  .menus {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    padding: 0 5px;
+    background-color: #fff;
+  }
+
+  .menu {
+    margin: auto;
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    font-size: 10px;
+  }
+}
+
+.action-link {
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 0 10px;
+  border: none;
+}
+
+.border-link {
+  color: #3765BC;
+  border: 1px solid #3765BC;
+  border-radius: 25px;
+}
+
+.grid-area {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  top: 120px;
+  overflow: hidden;
+}
+
+.content-area {
+  width: 50%;
+  padding: 20px 30px;
+}
+
+.content-area h2 {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 45px;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.grid-area img {
+  position: relative;
+  width: 50%;
+  right: -50px;
+}
+
+@media (max-width: 768px) {
+  .grid-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid-area .content-area {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-area h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+}
+
+.content-area button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #3765BC;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-radius: 28px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.content-area button img {
+  width: 40px;
+  margin-right: 60px;
+}
+
+@media (max-width: 768px) {
+  .content-area button {
+  }
+}
